@@ -44,6 +44,7 @@ public class HomePage extends javax.swing.JFrame {
         ReaderAddPanel.setVisible(false);
         ReaderUpdatePanel.setVisible(false);
         ReaderRemovePanel.setVisible(false);
+        Borrow_Return_Panel.setVisible(false);
         
         
         this.setTitle("Home page");
@@ -132,7 +133,45 @@ public class HomePage extends javax.swing.JFrame {
         label17 = new java.awt.Label();
         label18 = new java.awt.Label();
         ReaderUpdatePanel = new javax.swing.JPanel();
+        NewReaderName = new javax.swing.JTextField();
+        NewReaderGroup = new javax.swing.JTextField();
+        label19 = new java.awt.Label();
+        label20 = new java.awt.Label();
+        label21 = new java.awt.Label();
+        label22 = new java.awt.Label();
+        UpdatedReaderByCNP = new javax.swing.JTextField();
+        label23 = new java.awt.Label();
+        CheckBoxCNP = new javax.swing.JCheckBox();
+        label24 = new java.awt.Label();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextPane3 = new javax.swing.JTextPane();
+        UpdateReader = new java.awt.Button();
+        NewReaderID = new javax.swing.JTextField();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextPane4 = new javax.swing.JTextPane();
+        NewReaderCNP = new javax.swing.JTextField();
+        UpdatedReaderByID = new javax.swing.JTextField();
+        CheckBoxID = new javax.swing.JCheckBox();
+        readerIDCheckBox = new javax.swing.JCheckBox();
+        readerCNPCheckBox = new javax.swing.JCheckBox();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         ReaderRemovePanel = new javax.swing.JPanel();
+        label25 = new java.awt.Label();
+        DeletedReaderID = new javax.swing.JTextField();
+        CheckReaderID = new javax.swing.JCheckBox();
+        label26 = new java.awt.Label();
+        DeleteReader = new java.awt.Button();
+        Borrow_Return_Panel = new javax.swing.JPanel();
+        LendBox = new javax.swing.JCheckBox();
+        ReturnBox = new javax.swing.JCheckBox();
+        BookField = new javax.swing.JTextField();
+        ReaderField = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jEditorPane2 = new javax.swing.JEditorPane();
+        Action = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         Pages = new javax.swing.JMenu();
         Home = new javax.swing.JMenuItem();
@@ -147,8 +186,9 @@ public class HomePage extends javax.swing.JFrame {
         Remove_Reader = new javax.swing.JMenuItem();
         View = new javax.swing.JMenuItem();
         Actions = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         Refresh = new javax.swing.JMenuItem();
-        Quit = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setLocation(new java.awt.Point(650, 300));
@@ -227,7 +267,7 @@ public class HomePage extends javax.swing.JFrame {
                 .addGroup(BookAddPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(label5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(AddBook, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
 
         label6.setText("New Book Author");
@@ -250,7 +290,7 @@ public class HomePage extends javax.swing.JFrame {
 
         label11.setAlignment(java.awt.Label.CENTER);
         label11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        label11.setText("Book ID for Update");
+        label11.setText("Book ID to be changed");
 
         CheckBookID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -260,7 +300,7 @@ public class HomePage extends javax.swing.JFrame {
 
         jTextPane1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTextPane1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jTextPane1.setText("Complete thisfield first !");
+        jTextPane1.setText("Complete this field first !");
         jTextPane1.setDisabledTextColor(new java.awt.Color(0, 51, 51));
         jTextPane1.setEnabled(false);
         jTextPane1.setOpaque(false);
@@ -296,13 +336,13 @@ public class HomePage extends javax.swing.JFrame {
                                     .addComponent(label9, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(BookUpdatePanelLayout.createSequentialGroup()
                                         .addGroup(BookUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(BookUpdatePanelLayout.createSequentialGroup()
-                                                .addGroup(BookUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(BookUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(label11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGroup(BookUpdatePanelLayout.createSequentialGroup()
                                                     .addComponent(UpdatedBookID, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(label11, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(CheckBookID, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(CheckBookID, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(BookUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(label6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -404,10 +444,10 @@ public class HomePage extends javax.swing.JFrame {
         BookRemovePanelLayout.setVerticalGroup(
             BookRemovePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BookRemovePanelLayout.createSequentialGroup()
-                .addContainerGap(238, Short.MAX_VALUE)
-                .addGroup(BookRemovePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(label13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(DeleteBook, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(262, Short.MAX_VALUE)
+                .addGroup(BookRemovePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(DeleteBook, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                    .addComponent(label13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(75, 75, 75))
             .addGroup(BookRemovePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(BookRemovePanelLayout.createSequentialGroup()
@@ -417,7 +457,7 @@ public class HomePage extends javax.swing.JFrame {
                     .addGroup(BookRemovePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(CheckBookID1)
                         .addComponent(DeletedBookID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(145, Short.MAX_VALUE)))
+                    .addContainerGap(169, Short.MAX_VALUE)))
         );
 
         jEditorPane1.setEditable(false);
@@ -438,7 +478,7 @@ public class HomePage extends javax.swing.JFrame {
             HomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 346, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -509,29 +549,354 @@ public class HomePage extends javax.swing.JFrame {
                 .addGroup(ReaderAddPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(label15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(AddReader, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
+
+        NewReaderName.setEnabled(false);
+
+        NewReaderGroup.setEnabled(false);
+
+        label19.setText("New Reader ID");
+
+        label20.setText("New Reader CNP");
+
+        label21.setAlignment(java.awt.Label.CENTER);
+        label21.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        label21.setText("Chose one of these fields !");
+
+        label22.setText("New Reader Name");
+
+        UpdatedReaderByCNP.setEnabled(false);
+        UpdatedReaderByCNP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UpdatedReaderByCNPActionPerformed(evt);
+            }
+        });
+
+        label23.setText("New Reader Group");
+
+        CheckBoxCNP.setEnabled(false);
+        CheckBoxCNP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CheckBoxCNPActionPerformed(evt);
+            }
+        });
+
+        label24.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label24.setText("Update a Reader...");
+
+        jTextPane3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTextPane3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jTextPane3.setText("Complete these fields first !");
+        jTextPane3.setDisabledTextColor(new java.awt.Color(0, 51, 51));
+        jTextPane3.setEnabled(false);
+        jTextPane3.setOpaque(false);
+        jScrollPane4.setViewportView(jTextPane3);
+
+        UpdateReader.setEnabled(false);
+        UpdateReader.setLabel("Update Reader");
+        UpdateReader.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UpdateReaderActionPerformed(evt);
+            }
+        });
+
+        NewReaderID.setEnabled(false);
+
+        jTextPane4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTextPane4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jTextPane4.setText("Complete only the fields to be changed !");
+        jTextPane4.setDisabledTextColor(new java.awt.Color(0, 51, 51));
+        jTextPane4.setEnabled(false);
+        jTextPane4.setOpaque(false);
+        jScrollPane5.setViewportView(jTextPane4);
+
+        NewReaderCNP.setEnabled(false);
+
+        UpdatedReaderByID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UpdatedReaderByIDActionPerformed(evt);
+            }
+        });
+
+        CheckBoxID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CheckBoxIDActionPerformed(evt);
+            }
+        });
+
+        readerIDCheckBox.setSelected(true);
+        readerIDCheckBox.setText("ID");
+        readerIDCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                readerIDCheckBoxActionPerformed(evt);
+            }
+        });
+
+        readerCNPCheckBox.setText("CNP");
+        readerCNPCheckBox.setEnabled(false);
+        readerCNPCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                readerCNPCheckBoxActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("ID");
+
+        jLabel2.setText("CNP");
 
         javax.swing.GroupLayout ReaderUpdatePanelLayout = new javax.swing.GroupLayout(ReaderUpdatePanel);
         ReaderUpdatePanel.setLayout(ReaderUpdatePanelLayout);
         ReaderUpdatePanelLayout.setHorizontalGroup(
             ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 647, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReaderUpdatePanelLayout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReaderUpdatePanelLayout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(47, 47, 47)
+                        .addComponent(label24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(UpdateReader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(84, 84, 84))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReaderUpdatePanelLayout.createSequentialGroup()
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(103, 103, 103))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReaderUpdatePanelLayout.createSequentialGroup()
+                        .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(label21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(ReaderUpdatePanelLayout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(ReaderUpdatePanelLayout.createSequentialGroup()
+                                        .addComponent(readerIDCheckBox)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(readerCNPCheckBox))
+                                    .addGroup(ReaderUpdatePanelLayout.createSequentialGroup()
+                                        .addComponent(UpdatedReaderByID, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(CheckBoxID, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(ReaderUpdatePanelLayout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(UpdatedReaderByCNP, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(CheckBoxCNP, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(ReaderUpdatePanelLayout.createSequentialGroup()
+                                .addComponent(label19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(NewReaderID, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(ReaderUpdatePanelLayout.createSequentialGroup()
+                                .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(label23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(label22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(label20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(NewReaderName, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(NewReaderCNP, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(NewReaderGroup, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(75, 75, 75))))
         );
         ReaderUpdatePanelLayout.setVerticalGroup(
             ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 348, Short.MAX_VALUE)
+            .addGroup(ReaderUpdatePanelLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NewReaderID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ReaderUpdatePanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ReaderUpdatePanelLayout.createSequentialGroup()
+                                .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(label20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(NewReaderCNP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(10, 10, 10)
+                                .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(NewReaderName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(label22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(label21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CheckBoxID)
+                            .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(UpdatedReaderByID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel1))
+                            .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(NewReaderGroup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(label23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CheckBoxCNP)
+                            .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(UpdatedReaderByCNP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel2)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(UpdateReader, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(111, 111, 111))
+                    .addGroup(ReaderUpdatePanelLayout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addGroup(ReaderUpdatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(readerIDCheckBox)
+                            .addComponent(readerCNPCheckBox))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
+
+        label25.setAlignment(java.awt.Label.CENTER);
+        label25.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        label25.setText("Reader ID for Remove");
+
+        CheckReaderID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CheckReaderIDActionPerformed(evt);
+            }
+        });
+
+        label26.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label26.setText("Remove a Book...");
+
+        DeleteReader.setEnabled(false);
+        DeleteReader.setLabel("Remove Reader");
+        DeleteReader.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteReaderActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ReaderRemovePanelLayout = new javax.swing.GroupLayout(ReaderRemovePanel);
         ReaderRemovePanel.setLayout(ReaderRemovePanelLayout);
         ReaderRemovePanelLayout.setHorizontalGroup(
             ReaderRemovePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 647, Short.MAX_VALUE)
+            .addGroup(ReaderRemovePanelLayout.createSequentialGroup()
+                .addGroup(ReaderRemovePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ReaderRemovePanelLayout.createSequentialGroup()
+                        .addGap(152, 152, 152)
+                        .addComponent(label26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(69, 69, 69)
+                        .addComponent(DeleteReader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ReaderRemovePanelLayout.createSequentialGroup()
+                        .addGap(216, 216, 216)
+                        .addGroup(ReaderRemovePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(label25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(ReaderRemovePanelLayout.createSequentialGroup()
+                                .addComponent(DeletedReaderID, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(CheckReaderID, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(162, Short.MAX_VALUE))
         );
         ReaderRemovePanelLayout.setVerticalGroup(
             ReaderRemovePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 348, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReaderRemovePanelLayout.createSequentialGroup()
+                .addContainerGap(145, Short.MAX_VALUE)
+                .addComponent(label25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ReaderRemovePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(CheckReaderID)
+                    .addGroup(ReaderRemovePanelLayout.createSequentialGroup()
+                        .addComponent(DeletedReaderID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(3, 3, 3)))
+                .addGap(54, 54, 54)
+                .addGroup(ReaderRemovePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(DeleteReader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(label26, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
+                .addGap(81, 81, 81))
+        );
+
+        LendBox.setSelected(true);
+        LendBox.setText("Return");
+        LendBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LendBoxActionPerformed(evt);
+            }
+        });
+
+        ReturnBox.setText("Lend");
+        ReturnBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReturnBoxActionPerformed(evt);
+            }
+        });
+
+        ReaderField.setEnabled(false);
+        ReaderField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReaderFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Book ID");
+
+        jLabel4.setText("Reader ID");
+
+        jEditorPane2.setText("Check \"Lend\" box and complete \"Book ID\" field and \"Reader ID\" field to lend a book or \"Return\" box and Book ID field to finish borrowing of a book.");
+        jEditorPane2.setEnabled(false);
+        jScrollPane6.setViewportView(jEditorPane2);
+
+        Action.setText("Done !");
+        Action.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ActionActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Borrow_Return_PanelLayout = new javax.swing.GroupLayout(Borrow_Return_Panel);
+        Borrow_Return_Panel.setLayout(Borrow_Return_PanelLayout);
+        Borrow_Return_PanelLayout.setHorizontalGroup(
+            Borrow_Return_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Borrow_Return_PanelLayout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(76, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Borrow_Return_PanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(Borrow_Return_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Borrow_Return_PanelLayout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGap(18, 18, 18)
+                        .addComponent(ReaderField, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Borrow_Return_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Borrow_Return_PanelLayout.createSequentialGroup()
+                            .addComponent(LendBox, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ReturnBox))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Borrow_Return_PanelLayout.createSequentialGroup()
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(BookField, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(112, 112, 112)
+                .addComponent(Action)
+                .addGap(214, 214, 214))
+        );
+        Borrow_Return_PanelLayout.setVerticalGroup(
+            Borrow_Return_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Borrow_Return_PanelLayout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addGroup(Borrow_Return_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LendBox)
+                    .addComponent(ReturnBox))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(Borrow_Return_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BookField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(Action))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(Borrow_Return_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ReaderField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(142, 142, 142))
         );
 
         Pages.setText("Pages");
@@ -604,6 +969,7 @@ public class HomePage extends javax.swing.JFrame {
 
         Options.add(Reader);
 
+        View.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_MASK));
         View.setText("View");
         View.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -616,6 +982,17 @@ public class HomePage extends javax.swing.JFrame {
 
         Actions.setText("Actions");
 
+        jMenuItem1.setText("Borrow/Return");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        Actions.add(jMenuItem1);
+
+        jMenuItem2.setText("Search");
+        Actions.add(jMenuItem2);
+
         Refresh.setText("Refresh");
         Refresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -623,15 +1000,6 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
         Actions.add(Refresh);
-
-        Quit.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_MASK));
-        Quit.setText("Quit");
-        Quit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                QuitActionPerformed(evt);
-            }
-        });
-        Actions.add(Quit);
 
         jMenuBar1.add(Actions);
 
@@ -653,7 +1021,9 @@ public class HomePage extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(ReaderUpdatePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(ReaderRemovePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(ReaderRemovePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(Borrow_Return_Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -669,7 +1039,9 @@ public class HomePage extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(ReaderUpdatePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(ReaderRemovePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(ReaderRemovePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(Borrow_Return_Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -683,16 +1055,13 @@ public class HomePage extends javax.swing.JFrame {
         ReaderAddPanel.setVisible(false);
         ReaderUpdatePanel.setVisible(false);
         ReaderRemovePanel.setVisible(false);
+        Borrow_Return_Panel.setVisible(false);
         
         
     }//GEN-LAST:event_Remove_BookActionPerformed
 
     
     
-    private void QuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitActionPerformed
-        
-    }//GEN-LAST:event_QuitActionPerformed
-
     private void Add_BookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Add_BookActionPerformed
         BookAddPanel.setVisible(true);
         BookUpdatePanel.setVisible(false);
@@ -701,6 +1070,7 @@ public class HomePage extends javax.swing.JFrame {
         ReaderAddPanel.setVisible(false);
         ReaderUpdatePanel.setVisible(false);
         ReaderRemovePanel.setVisible(false);
+        Borrow_Return_Panel.setVisible(false);
         
     }//GEN-LAST:event_Add_BookActionPerformed
 
@@ -724,6 +1094,7 @@ public class HomePage extends javax.swing.JFrame {
         ReaderAddPanel.setVisible(false);
         ReaderUpdatePanel.setVisible(false);
         ReaderRemovePanel.setVisible(false);
+        Borrow_Return_Panel.setVisible(false);
     }//GEN-LAST:event_Update_BookActionPerformed
 
     private void HomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeActionPerformed
@@ -734,6 +1105,7 @@ public class HomePage extends javax.swing.JFrame {
         ReaderAddPanel.setVisible(false);
         ReaderUpdatePanel.setVisible(false);
         ReaderRemovePanel.setVisible(false);
+        Borrow_Return_Panel.setVisible(false);
     }//GEN-LAST:event_HomeActionPerformed
 
     private void RefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefreshActionPerformed
@@ -818,8 +1190,7 @@ public class HomePage extends javax.swing.JFrame {
     
     // <editor-fold defaultstate="collapsed" desc="Update Button">  
     private void UpdateBookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateBookActionPerformed
-        if(CheckBookID.isSelected()==true)
-        {
+        
             try
             {
                 Connection connection = DB_Connection.InitializeConnection();
@@ -845,7 +1216,7 @@ public class HomePage extends javax.swing.JFrame {
                         catch(Exception e)
                         {
                             check=false;
-                            System.out.println(check);
+                            //System.out.println(check);
                           
                         }
                         
@@ -870,21 +1241,20 @@ public class HomePage extends javax.swing.JFrame {
                             {
                                 Library.Book.UpdateBookType(Integer.parseInt(updatedBookID), newBookType);
                             }
-                            JOptionPane.showMessageDialog (null,"   Book has been updated !", "", JOptionPane.INFORMATION_MESSAGE);
-                            
-                            /*DefaultTableModel model = (DefaultTableModel) view.jTable1.getModel();
-
-                            int row=2;
-                            for (int i = model.getRowCount() - 1; i >= 0; --i) {
-                                for (int j = model.getColumnCount() - 1; j >= 0; --j) {
-                                    if (model.getValueAt(i, j).equals(newBookID))
-                                    {
-                                        row=i;
-                                    }
-                                }
+                            if(newBookID.equals("")&&newBookName.equals("")&&
+                                                newBookAuthor.equals("")&&newBookType.equals(""))
+                            {
+                                JOptionPane.showMessageDialog (null,"   There is nothing to change !", "Warning", JOptionPane.WARNING_MESSAGE);
+                                            
+                                        //view.jTable1.updateUI();
+                            }
+                            else
+                            {
+                                JOptionPane.showMessageDialog (null,"   Book has been updated !", "", JOptionPane.INFORMATION_MESSAGE);
+                                        //view.jTable1.updateUI();
                             }
                             
-                            view.jTable1.setValueAt(newBookID, 16, 1);*/
+                            
                             
                          }
                          else
@@ -924,8 +1294,12 @@ public class HomePage extends javax.swing.JFrame {
                                         {
                                         Library.Book.UpdateBookID(Integer.parseInt(updatedBookID), Integer.parseInt(newBookID));
                                         }
-                                        JOptionPane.showMessageDialog (null,"   Book has been updated !", "", JOptionPane.INFORMATION_MESSAGE);
-                                        view.jTable1.updateUI();
+                                        
+                                            JOptionPane.showMessageDialog (null,"   There is nothing to change !", "Warning", JOptionPane.WARNING_MESSAGE);
+                                            
+                                        
+                                        
+                                        
                                     }
                                 }
                                 
@@ -942,13 +1316,8 @@ public class HomePage extends javax.swing.JFrame {
             {
                 
             }
-        }
-        else
-        {
-            //It is useless since the button is not enabled as log as the checkbox is not cheked
-            JOptionPane.showMessageDialog (null, "Complete the BookID field and check the box !"
-                    , "Warning", JOptionPane.WARNING_MESSAGE);
-        }
+        
+        
     }//GEN-LAST:event_UpdateBookActionPerformed
 // </editor-fold>  
     
@@ -956,93 +1325,75 @@ public class HomePage extends javax.swing.JFrame {
     
     private void CheckBookIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBookIDActionPerformed
         
+        
         int checkBookID;
-        try
+        if(CheckBookID.isSelected()==true)
         {
-            checkBookID = Integer.parseInt(UpdatedBookID.getText());
+                try
+            {
+                checkBookID = Integer.parseInt(UpdatedBookID.getText());
 
-        }
-        catch (NumberFormatException e)
-        {
-            checkBookID=-100;
-        }
-        System.out.println(checkBookID);
-        if(checkBookID!=-100)
-        {
-            if( CheckBookID.isSelected()==true && !UpdatedBookID.getText().equals("") && Integer.parseInt(UpdatedBookID.getText())>0 )
-        {
-            
-            
-            UpdatedBookID.setEditable(false);
-            UpdateBook.setEnabled(true);
-            NewBookID.setEnabled(true);
-            NewBookName.setEnabled(true);
-            NewBookAuthor.setEnabled(true);
-            NewBookType.setEnabled(true);
-            
-         
-        }
-        else if(checkBookID<0||UpdatedBookID.getText().equals("")||Integer.parseInt(UpdatedBookID.getText())<1)
-        {
-            CheckBookID.setSelected(false);
-            UpdatedBookID.setEditable(true);
-            UpdateBook.setEnabled(false);
-            NewBookID.setEnabled(false);
-            NewBookName.setEnabled(false);
-            NewBookAuthor.setEnabled(false);
-            NewBookType.setEnabled(false);
-            
-            
-            if(UpdatedBookID.getText().equals(""))
-            {
-                JOptionPane.showMessageDialog (null, "Complete the BookID field !"
-                    , "Warning", JOptionPane.WARNING_MESSAGE);
             }
-            else if(Integer.parseInt(UpdatedBookID.getText())<1)
+            catch (NumberFormatException e)
             {
+                checkBookID=-100;
+            }
+        
+            //System.out.println(checkReaderID);
+        
+        
+          if(UpdatedBookID.getText().equals(""))
+            {
+                CheckBookID.setSelected(false);
+                JOptionPane.showMessageDialog (null, "Complete the ID field !"
+                    , "Warning", JOptionPane.WARNING_MESSAGE);
                 
+            }
+            else if(checkBookID<1&&checkBookID!=-100)
+            {
+                CheckBookID.setSelected(false);
                 JOptionPane.showMessageDialog (null, "Book ID must be highere than 0 !"
                     , "Warning", JOptionPane.WARNING_MESSAGE);
             }
-           
-            
-            
-        }
-        else 
-        {
-            CheckBookID.setSelected(false);
-            UpdatedBookID.setEditable(true);
-            UpdateBook.setEnabled(false);
-            NewBookID.setEnabled(false);
-            NewBookName.setEnabled(false);
-            NewBookAuthor.setEnabled(false);
-            NewBookType.setEnabled(false);
-            
-            
-            
-        }
-        }
-        else
-        {
-            CheckBookID.setSelected(false);
-            UpdatedBookID.setEditable(true);
-            UpdateBook.setEnabled(false);
-            NewBookID.setEnabled(false);
-            NewBookName.setEnabled(false);
-            NewBookAuthor.setEnabled(false);
-            NewBookType.setEnabled(false);
-            JOptionPane.showMessageDialog (null, "Invalid book ID !"
+            else if(checkBookID==-100)
+            {
+                CheckBookID.setSelected(false);
+                JOptionPane.showMessageDialog (null, "Invalid Book ID !"
                     , "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+          
+          else
+            {
+                
+                NewBookID.setEnabled(true);
+                NewBookName.setEnabled(true);
+                NewBookAuthor.setEnabled(true);
+                NewBookType.setEnabled(true);
+                UpdatedBookID.setEnabled(false);
+                UpdateBook.setEnabled(true);
+                
+            }
+        
         }
-        
-        
-        
+        else if(CheckBookID.isSelected()==false)
+        {
+            ;
+            NewBookID.setEnabled(false);
+            NewBookName.setEnabled(false);
+            NewBookAuthor.setEnabled(false);
+            NewBookType.setEnabled(false);
+            UpdatedBookID.setEnabled(true);
+            UpdateBook.setEnabled(false);
+        }
         
         
             
     }//GEN-LAST:event_CheckBookIDActionPerformed
 
     private void CheckBookID1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBookID1ActionPerformed
+        
+     if(CheckBookID.isSelected()==false)
+     {
         int checkBookID;
         try
         {
@@ -1068,6 +1419,7 @@ public class HomePage extends javax.swing.JFrame {
             {
                 DeleteBook.setEnabled(false);
                 DeletedBookID.setEnabled(true);
+                CheckBookID1.setSelected(false);
                 JOptionPane.showMessageDialog (null, "Book ID must be higher than 0 ! "
                     , "Error", JOptionPane.WARNING_MESSAGE);
                 
@@ -1085,6 +1437,13 @@ public class HomePage extends javax.swing.JFrame {
                 CheckBookID1.setSelected(false);
                 JOptionPane.showMessageDialog (null, "Invalid Book ID ! \n "
                     , "Error", JOptionPane.WARNING_MESSAGE);
+        }
+    } 
+    else  if(CheckBookID.isSelected()==false)
+        {
+                DeleteBook.setEnabled(false);
+                DeletedBookID.setEnabled(true);
+                CheckBookID.setSelected(false);
         }
         
         
@@ -1119,6 +1478,7 @@ public class HomePage extends javax.swing.JFrame {
         BookRemovePanel.setVisible(false);
         ReaderUpdatePanel.setVisible(false);
         ReaderRemovePanel.setVisible(false);
+        Borrow_Return_Panel.setVisible(false);
     }//GEN-LAST:event_Add_ReaderActionPerformed
 
     private void Update_ReaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Update_ReaderActionPerformed
@@ -1130,6 +1490,7 @@ public class HomePage extends javax.swing.JFrame {
         BookAddPanel.setVisible(false);
         BookRemovePanel.setVisible(false);
         ReaderRemovePanel.setVisible(false);
+        Borrow_Return_Panel.setVisible(false);
     }//GEN-LAST:event_Update_ReaderActionPerformed
 
     private void Remove_ReaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Remove_ReaderActionPerformed
@@ -1141,6 +1502,7 @@ public class HomePage extends javax.swing.JFrame {
         BookUpdatePanel.setVisible(false);   
         BookAddPanel.setVisible(false);
         BookRemovePanel.setVisible(false);
+        Borrow_Return_Panel.setVisible(false);
         
     }//GEN-LAST:event_Remove_ReaderActionPerformed
 
@@ -1151,7 +1513,23 @@ public class HomePage extends javax.swing.JFrame {
             String readerGroup=ReaderGroup.getText();
             boolean checkID=true;
             boolean checkGroup=true;
+            boolean checkCNP=true;
             
+            for(int i=0;i<readerCNP.length();i++)
+            {
+               try
+               {    
+                   Integer.parseInt(readerCNP.substring(i, i+1));
+                   
+                   
+               }
+               catch(Exception e)
+               {
+                   checkCNP=false;
+                   break;
+               }
+                
+            }
             
             
             int iReaderID=-100;//0 is too risky for a db
@@ -1215,6 +1593,23 @@ public class HomePage extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog (null, 
                     "Reader Group must be highere than 0 !", "Warning", JOptionPane.WARNING_MESSAGE);
             }
+            else if(readerCNP.length()!=13||checkCNP==false)
+            {
+                if(readerCNP.length()<13)
+                //eventualy a better check for CNP
+                JOptionPane.showMessageDialog (null, 
+                    "Too short CNP !", "Warning", JOptionPane.WARNING_MESSAGE);
+                else if(readerCNP.length()>13)
+                {
+                    JOptionPane.showMessageDialog (null, 
+                    "Too long CNP !", "Warning", JOptionPane.WARNING_MESSAGE);
+                }
+                else if(checkCNP==false)
+                {
+                    JOptionPane.showMessageDialog (null, 
+                    "The CNP must be an integer poisitive number !", "Warning", JOptionPane.WARNING_MESSAGE);
+                }
+            }
             else 
             {
                 try
@@ -1246,6 +1641,720 @@ public class HomePage extends javax.swing.JFrame {
     private void BookIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BookIDActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BookIDActionPerformed
+
+    private void CheckBoxCNPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBoxCNPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CheckBoxCNPActionPerformed
+
+    private void UpdateReaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateReaderActionPerformed
+           
+        if(CheckBoxID.isSelected()==true)
+        {   
+            String newReaderID=NewReaderID.getText();
+            String newReaderCNP=NewReaderCNP.getText();
+            String newReaderName=NewReaderName.getText();
+            String newReaderGroup=NewReaderGroup.getText();
+            
+            int iNewReaderID=-200;
+            int iNewReaderGroup=-200;
+            
+            boolean checkCNP=true;
+            
+            if(!newReaderCNP.equals(""))
+            for(int i=0;i<newReaderCNP.length();i++)
+            {
+               try
+               {    
+                   Integer.parseInt(newReaderCNP.substring(i, i+1));
+                   
+                   
+               }
+               catch(Exception e)
+               {
+                   checkCNP=false;
+                   break;
+               }
+                
+            }
+            
+            
+            
+            
+            //convert to int ID
+            if(!NewReaderID.getText().equals(""))
+            try
+            {
+                iNewReaderID=Integer.parseInt(NewReaderID.getText());
+            }
+            catch(Exception e)
+            {
+                iNewReaderID=-100;
+            }
+            
+            
+            //convert to int group 
+            if(!NewReaderGroup.getText().equals(""))
+            try
+            {
+                iNewReaderGroup=Integer.parseInt(NewReaderGroup.getText());
+            }
+            catch(Exception e)
+            {
+                iNewReaderGroup=-100;
+            }
+            
+            
+            
+            if(iNewReaderID==-100)
+            {
+                JOptionPane.showMessageDialog (null, "Invalid reader ID !", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(iNewReaderID<0&&!NewReaderID.getText().equals(""))//it starts as - 200
+            {
+                JOptionPane.showMessageDialog (null, "The ID must be a positive integer value !", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(iNewReaderGroup==-100)
+            {
+                JOptionPane.showMessageDialog (null, "Invalid reader Group !", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(iNewReaderGroup<0&&!NewReaderGroup.getText().equals(""))
+            {
+                JOptionPane.showMessageDialog (null, "The group must be a positive integer value !", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(newReaderCNP.length()<13&&!NewReaderCNP.getText().equals(""))
+            {
+                JOptionPane.showMessageDialog (null, "The CNP is too short !", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(newReaderCNP.length()>13&&!NewReaderCNP.getText().equals(""))
+            {
+                JOptionPane.showMessageDialog (null, "The CNP is too long !", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(checkCNP==false&&!NewReaderCNP.getText().equals(""))
+            {
+                JOptionPane.showMessageDialog (null, "The CNP is invalid !", "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else
+            {
+                try
+                {
+                    
+                    
+                    if(!newReaderCNP.equals("") )
+                    {
+                        Library.Reader.UpdateReaderCNP(Integer.parseInt(UpdatedReaderByID.getText()), newReaderCNP);
+                         
+                    }
+                    if(!newReaderName.equals(""))
+                    {
+                        Library.Reader.UpdateReaderName(Integer.parseInt(UpdatedReaderByID.getText()), newReaderName);
+                    }
+                    
+                    if(!newReaderGroup.equals(""))
+                    {
+                        Library.Reader.UpdateReaderGroup(Integer.parseInt(UpdatedReaderByID.getText()), iNewReaderGroup);
+                    }
+                    
+                    if(!newReaderID.equals("") )//&& OK==true
+                    {
+                        
+                            Library.Reader.UpdateReaderID(Integer.parseInt(UpdatedReaderByID.getText()), iNewReaderID);
+                            
+                        
+                    }
+                    
+                    
+                        JOptionPane.showMessageDialog (null, "The reader has been updated !", "", JOptionPane.INFORMATION_MESSAGE);
+                    
+                    
+                }
+                catch(Exception e)
+                {
+                    //nothing
+                }
+                
+                
+                
+            }
+            
+            
+            
+            
+        }
+            
+            /*if()
+            {
+                
+            }
+            else if()
+            {
+                
+            }
+            else if()
+            {
+            
+            }*/
+            
+            
+            
+            
+            
+            
+        /*}
+        else if(CheckBoxCNP.isSelected()==false)
+        {
+            
+        }*/
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*if(CheckBoxID.isSelected()==true)
+           {
+               try
+            {
+                Connection connection = DB_Connection.InitializeConnection();
+                
+                if(connection!=null)
+                {
+                    String updatedReaderByID = UpdatedReaderByID.getText();
+                    
+                    ResultSet resultSet = Library.Reader.SearchReaderByID(Integer.parseInt(updatedReaderByID));
+                    
+                    if(!resultSet.next())
+                    {
+                        JOptionPane.showMessageDialog (null,"Reader not found !", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                    else
+                    {
+                        boolean check=true;
+                        if(!NewReaderID.getText().equals(""))
+                        try
+                        {
+                            int newReaderIDCheck=Integer.parseInt(NewReaderID.getText());
+                            
+                        }
+                        catch(Exception e)
+                        {
+                            check=false;
+                            //System.out.println(check);
+                          
+                        }
+                        
+                        
+                        
+                        int readerID=Integer.parseInt(updatedReaderByID);
+                        String newReaderID=NewReaderID.getText();
+                        String newReaderCNP=NewReaderCNP.getText();
+                        String newReaderName=NewReaderName.getText();
+                        int newReaderGroup=Integer.parseInt(NewReaderGroup.getText());
+                        
+                            
+                        
+                        
+                        
+                        boolean checkCNP=true;
+                        for(int i=0;i<newReaderCNP.length();i++)
+                        {
+                            try
+                            {    
+                                Integer.parseInt(newReaderCNP.substring(i, i+1));
+                   
+                   
+                            }
+                            catch(Exception e)
+                            {
+                                checkCNP=false;
+                                break;
+                            }
+                            
+                        }
+                        
+                        
+                        
+                         if(NewReaderID.getText().equals(""))
+                         {
+                             if(NewReaderCNP.getText().equals(""))
+                             {
+                                 resultSet=Library.Reader.SearchReaderByCNP(newReaderCNP);
+                             }
+                             
+                            if(resultSet.next()&&checkCNP==false)
+                            {
+                                if(newReaderCNP.length()<13)
+                                        JOptionPane.showMessageDialog (null,"The CNP is too short !", "Error", JOptionPane.WARNING_MESSAGE);
+                                        //view.jTable1.updateUI();
+                                else if(newReaderCNP.length()>13)
+                                        JOptionPane.showMessageDialog (null,"The CNP is too long !", "Error", JOptionPane.WARNING_MESSAGE);
+                                else if(checkCNP==false)
+                                        JOptionPane.showMessageDialog (null,"The CNP is not valid ! ", "Error ", JOptionPane.WARNING_MESSAGE);
+                                
+                                
+                            }
+                            else if(resultSet.next())
+                            {
+                                JOptionPane.showMessageDialog (null,"This CNP already exist !\n "
+                                        + "The changes have not succeeded !"
+                                        +"There might be a duplicate person in the database...\n", "", JOptionPane.WARNING_MESSAGE);
+                                        //view.jTable1.updateUI();
+                            }
+                             else
+                             {
+                                 if(!newReaderCNP.equals(""))
+                                {
+                                Library.Reader.UpdateReaderCNP(readerID, newReaderCNP);
+                                }
+                                if(!newReaderName.equals(""))
+                                {
+                                Library.Reader.UpdateReaderName(readerID, newReaderName);
+                                }
+                                if(!NewBookType.getText().equals(""))           //the variable is an integer and I dont wnat to compare it with 0
+                                {
+                                Library.Reader.UpdateReaderGroup(readerID, newReaderGroup);
+                                }
+                                if(NewReaderID.getText().equals("")&&newReaderCNP.equals("")&&
+                                                newReaderName.equals("")&&NewReaderGroup.getText().equals(""))
+                                {
+                                JOptionPane.showMessageDialog (null,"   There is nothing to change !", "Warning", JOptionPane.WARNING_MESSAGE);
+                                            
+                                        //view.jTable1.updateUI();
+                                }
+                                else
+                                {
+                                JOptionPane.showMessageDialog (null,"   Reader has been updated !", "", JOptionPane.INFORMATION_MESSAGE);
+                                        //view.jTable1.updateUI();
+                                }
+                             }
+                             
+                             
+                            
+                            
+                            
+                            
+                         }
+                         else
+                         {
+                                if(check==false)
+                                {
+                                    JOptionPane.showMessageDialog (null,"   Invalid reader ID !\n  The book has not been updated !", "Error", JOptionPane.WARNING_MESSAGE);
+                                }
+                                        else if(Integer.parseInt(newReaderID)<1)
+                                {
+                                    JOptionPane.showMessageDialog (null,"The new reader ID must be highere than 0 !\n The book has not been updated !", "Error", JOptionPane.WARNING_MESSAGE);
+                                }
+                                
+                                else
+                                {
+                                    //cheking for existence of id and CNP of the reader
+                                    Library.Reader reader=Library.Reader.ExtractReaderDatas(Integer.parseInt(newReaderID));
+                                    Library.Reader reader1=Library.Reader.ExtractReaderDatas(Integer.parseInt(newReaderCNP));
+                                    
+                                    
+                                    
+                                    if(reader.GetReaderID()!=0)
+                                    {
+                                        JOptionPane.showMessageDialog (null,"The ID is already used !", "Error", JOptionPane.WARNING_MESSAGE);
+                                    }
+                                    else if(reader1.GetReaderID()!=0)
+                                    {
+                                        JOptionPane.showMessageDialog (null,"The CNP is already used !", "Error", JOptionPane.WARNING_MESSAGE);
+                                    }
+                                    else
+                                    {
+                                        
+                                        if(!newReaderName.equals(""))
+                                        {
+                                        Library.Reader.UpdateReaderName(Integer.parseInt(updatedReaderByID), newReaderName);
+                                        }
+                                        if(!NewBookAuthor.getText().equals(""))
+                                        {
+                                        Library.Reader.UpdateReaderGroup(Integer.parseInt(updatedReaderByID), newReaderGroup);
+                                        }
+                                        if(!newReaderCNP.equals(""))
+                                        {
+                                        Library.Reader.UpdateReaderCNP(Integer.parseInt(updatedReaderByID), newReaderCNP);
+                                        }
+                                        if(!NewBookID.getText().equals(""))
+                                        {
+                                        Library.Reader.UpdateReaderID(Integer.parseInt(updatedReaderByID), Integer.parseInt(newReaderID));
+                                        }
+                                        
+                                            JOptionPane.showMessageDialog (null,"   There is nothing to change !", "Warning", JOptionPane.WARNING_MESSAGE);
+                                            
+                                        
+                                        
+                                        
+                                    }
+                                }
+                                
+                         }
+                   
+                    }
+                    //DO the staff
+                    
+                    
+                }
+                //else nothing(the progrm manage the messages already)
+            }
+            catch(Exception ex)
+            {
+                
+            }
+           }
+           else if(CheckBoxCNP.isSelected()==true)
+           {
+               ///Newxt part of code
+           }
+           else
+           {
+               JOptionPane.showMessageDialog (null, "A seriosu problem has occured !\n"
+                            +"Please contact an admin !", "Warning", JOptionPane.WARNING_MESSAGE);
+           }*/
+            
+    }//GEN-LAST:event_UpdateReaderActionPerformed
+
+    private void CheckBoxIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckBoxIDActionPerformed
+        int checkReaderID;
+        if(CheckBoxID.isSelected()==true)
+        {
+                try
+            {
+                checkReaderID = Integer.parseInt(UpdatedReaderByID.getText());
+
+            }
+            catch (NumberFormatException e)
+            {
+                checkReaderID=-100;
+            }
+        
+            //System.out.println(checkReaderID);
+        
+        
+          if(UpdatedReaderByID.getText().equals(""))
+            {
+                CheckBoxID.setSelected(false);
+                JOptionPane.showMessageDialog (null, "Complete the Reader ID field !"
+                    , "Warning", JOptionPane.WARNING_MESSAGE);
+                
+            }
+            else if(checkReaderID<1&&checkReaderID!=-100)
+            {
+                CheckBoxID.setSelected(false);
+                JOptionPane.showMessageDialog (null, "Reader ID must be highere than 0 !"
+                    , "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+            else if(checkReaderID==-100)
+            {
+                CheckBoxID.setSelected(false);
+                JOptionPane.showMessageDialog (null, "Invalid Reader ID !"
+                    , "Warning", JOptionPane.WARNING_MESSAGE);
+            }
+          
+          
+          else
+            {
+                UpdateReader.setEnabled(true);
+                NewReaderID.setEnabled(true);
+                NewReaderCNP.setEnabled(true);
+                NewReaderName.setEnabled(true);
+                NewReaderGroup.setEnabled(true);
+                UpdatedReaderByID.setEnabled(false);
+                
+            }
+        
+        }
+        else if(CheckBoxID.isSelected()==false)
+        {
+            UpdateReader.setEnabled(false);
+            NewReaderID.setEnabled(false);
+            NewReaderCNP.setEnabled(false);
+            NewReaderName.setEnabled(false);
+            NewReaderGroup.setEnabled(false);
+            UpdatedReaderByID.setEnabled(true);
+        }
+        
+        
+        
+        
+        
+            
+            
+            
+           
+            
+            
+        
+    }//GEN-LAST:event_CheckBoxIDActionPerformed
+
+    private void UpdatedReaderByCNPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdatedReaderByCNPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UpdatedReaderByCNPActionPerformed
+
+    private void readerCNPCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readerCNPCheckBoxActionPerformed
+        
+        if(readerCNPCheckBox.isSelected()==true)
+        {
+            readerIDCheckBox.setEnabled(false);
+            
+            UpdatedReaderByID.setEnabled(false);
+            CheckBoxID.setEnabled(false);
+            UpdatedReaderByCNP.setEnabled(true);
+            CheckBoxCNP.setEnabled(true);
+            NewReaderID.setEnabled(false);
+            NewReaderCNP.setEnabled(false);
+            NewReaderName.setEnabled(false);
+            NewReaderGroup.setEnabled(false);
+        }
+        
+        if(readerCNPCheckBox.isSelected()==false)
+        {
+            UpdateReader.setEnabled(false);
+            UpdatedReaderByID.setText(null);
+            UpdatedReaderByCNP.setText(null);
+            readerIDCheckBox.setEnabled(true);
+            CheckBoxCNP.setSelected(false);
+            CheckBoxID.setSelected(false);
+            readerIDCheckBox.setSelected(false);
+            UpdatedReaderByID.setEnabled(false);
+            CheckBoxID.setEnabled(false);
+            UpdatedReaderByCNP.setEnabled(false);
+            CheckBoxCNP.setEnabled(false);
+            NewReaderID.setEnabled(false);
+            NewReaderCNP.setEnabled(false);
+            NewReaderName.setEnabled(false);
+            NewReaderGroup.setEnabled(false);
+        }
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_readerCNPCheckBoxActionPerformed
+
+    private void readerIDCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readerIDCheckBoxActionPerformed
+        
+        
+        
+        if(readerIDCheckBox.isSelected()==true)
+        {
+            readerCNPCheckBox.setEnabled(false);
+            
+            UpdatedReaderByID.setEnabled(true);
+            CheckBoxID.setEnabled(true);
+            UpdatedReaderByCNP.setEnabled(false);
+            CheckBoxCNP.setEnabled(false);
+            NewReaderID.setEnabled(false);
+            NewReaderCNP.setEnabled(false);
+            NewReaderName.setEnabled(false);
+            NewReaderGroup.setEnabled(false);
+        }
+        
+        
+        if(readerIDCheckBox.isSelected()==false)
+        {   UpdateReader.setEnabled(false);
+            UpdatedReaderByID.setText(null);
+            UpdatedReaderByCNP.setText(null);
+            readerCNPCheckBox.setEnabled(true);
+            CheckBoxCNP.setSelected(false);
+            CheckBoxID.setSelected(false);
+            UpdatedReaderByID.setEnabled(false);
+            CheckBoxID.setEnabled(false);
+            UpdatedReaderByCNP.setEnabled(false);
+            CheckBoxCNP.setEnabled(false);
+            NewReaderID.setEnabled(false);
+            NewReaderCNP.setEnabled(false);
+            NewReaderName.setEnabled(false);
+            NewReaderGroup.setEnabled(false);
+        }
+        
+        
+        
+        
+    }//GEN-LAST:event_readerIDCheckBoxActionPerformed
+
+    private void UpdatedReaderByIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdatedReaderByIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UpdatedReaderByIDActionPerformed
+
+    private void CheckReaderIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckReaderIDActionPerformed
+        
+         if(CheckReaderID.isSelected()==true)
+        {
+        int checkReaderID;
+        
+        try
+        {
+            checkReaderID=Integer.parseInt(DeletedReaderID.getText());
+        }
+        catch (NumberFormatException e)
+        {
+            checkReaderID=-100;
+        }
+        
+        
+       
+            if(checkReaderID!=-100)
+        {
+            if(CheckReaderID.isSelected()==true && Integer.parseInt(DeletedReaderID.getText())>0)
+            {
+                 
+                    DeleteReader.setEnabled(true);
+                    DeletedReaderID.setEnabled(false);
+                  
+            }
+            else if(CheckReaderID.isSelected()==true)
+            {
+                DeleteReader.setEnabled(false);
+                DeletedReaderID.setEnabled(true);
+                CheckReaderID.setSelected(false);
+                JOptionPane.showMessageDialog (null, "Reader ID must be higher than 0 ! "
+                    , "Error", JOptionPane.WARNING_MESSAGE);
+                
+            }
+            else
+            {
+                DeleteReader.setEnabled(false);
+                DeletedReaderID.setEnabled(true);
+            }
+        }
+        else
+        {
+                DeleteReader.setEnabled(false);
+                DeletedReaderID.setEnabled(true);
+                CheckReaderID.setSelected(false);
+                
+                JOptionPane.showMessageDialog (null, "Invalid reader ID ! \n "
+                    , "Error", JOptionPane.WARNING_MESSAGE);
+        }
+        }
+         else  if(CheckReaderID.isSelected()==false)
+        {
+                DeleteReader.setEnabled(false);
+                DeletedReaderID.setEnabled(true);
+                CheckReaderID.setSelected(false);
+        }
+        
+        
+    }//GEN-LAST:event_CheckReaderIDActionPerformed
+
+    private void DeleteReaderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteReaderActionPerformed
+        try
+        {
+            ResultSet resultSet=Library.Reader.SearchReaderByID(Integer.parseInt(DeletedReaderID.getText()));
+            if(resultSet.next())
+            {
+                Library.Reader.DeletReaderByID(Integer.parseInt(DeletedReaderID.getText()));
+            }
+            else
+            {
+                JOptionPane.showMessageDialog (null, "Reader not found !", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        catch (SQLException ex)
+        {
+            //System.out.println("Here");
+            //Logger.getLogger(HomePage.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_DeleteReaderActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        
+        BookRemovePanel.setVisible(false);
+        BookAddPanel.setVisible(false);
+        BookUpdatePanel.setVisible(false);
+        HomePanel.setVisible(false);
+        ReaderAddPanel.setVisible(false);
+        ReaderUpdatePanel.setVisible(false);
+        ReaderRemovePanel.setVisible(false);
+        Borrow_Return_Panel.setVisible(false);
+        Borrow_Return_Panel.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void ReaderFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReaderFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ReaderFieldActionPerformed
+
+    private void LendBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LendBoxActionPerformed
+        if(LendBox.isSelected()==true)
+        {
+            ReaderField.setEnabled(false);
+            ReturnBox.setSelected(false);
+        }
+        
+        
+    }//GEN-LAST:event_LendBoxActionPerformed
+
+    private void ReturnBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnBoxActionPerformed
+        if(ReturnBox.isSelected()==true)
+        {
+            LendBox.setSelected(false);
+            ReaderField.setEnabled(true);
+        }
+        
+    }//GEN-LAST:event_ReturnBoxActionPerformed
+
+    private void ActionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActionActionPerformed
+        if(ReturnBox.isSelected()==true)//inverted names
+        {
+            int readerField;
+            int bookField;
+            try
+            {
+                readerField=Integer.parseInt(ReaderField.getText());
+                bookField=Integer.parseInt(BookField.getText());
+                
+                if(readerField<0)
+                {
+                    JOptionPane.showMessageDialog(null,"Reader ID must be bigger than 0 !","",JOptionPane.WARNING_MESSAGE);
+                }
+                else if(bookField<0)
+                {
+                    JOptionPane.showMessageDialog(null,"Book ID must be bigger than 0 !","",JOptionPane.WARNING_MESSAGE);
+                }
+                else
+                {
+                    Library.Reader.BorrowBook(readerField, bookField);
+                }
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null,"Invalid reader or book ID !","",JOptionPane.WARNING_MESSAGE);
+            }
+        }
+        else if(LendBox.isSelected()==true)//inverted names
+        {
+            
+            int bookField;
+            try
+            {
+                
+                bookField=Integer.parseInt(BookField.getText());
+                
+                
+                if(bookField<0)
+                {
+                    JOptionPane.showMessageDialog(null,"Reader ID must be bigger than 0 !","",JOptionPane.WARNING_MESSAGE);
+                }
+                else
+                {
+                    Library.Reader.ReturnBook(bookField);
+                }
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null,"Invalid book ID !","",JOptionPane.WARNING_MESSAGE);
+            }
+        }
+        else if(LendBox.isSelected()==false && ReturnBox.isSelected()==false)
+        {
+            JOptionPane.showMessageDialog(null,"Please choose an option !","",JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_ActionActionPerformed
 
     
     
@@ -1297,6 +2406,7 @@ public class HomePage extends javax.swing.JFrame {
     public static  View view = new View();
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Action;
     private javax.swing.JMenu Actions;
     private java.awt.Button AddBook;
     private java.awt.Button AddReader;
@@ -1305,27 +2415,39 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JMenu Book;
     private javax.swing.JPanel BookAddPanel;
     private javax.swing.JTextField BookAuthor;
+    private javax.swing.JTextField BookField;
     private javax.swing.JTextField BookID;
     private javax.swing.JTextField BookName;
     private javax.swing.JPanel BookRemovePanel;
     private javax.swing.JTextField BookType;
     private javax.swing.JPanel BookUpdatePanel;
+    private javax.swing.JPanel Borrow_Return_Panel;
     private javax.swing.JCheckBox CheckBookID;
     private javax.swing.JCheckBox CheckBookID1;
+    private javax.swing.JCheckBox CheckBoxCNP;
+    private javax.swing.JCheckBox CheckBoxID;
+    private javax.swing.JCheckBox CheckReaderID;
     private java.awt.Button DeleteBook;
+    private java.awt.Button DeleteReader;
     private javax.swing.JTextField DeletedBookID;
+    private javax.swing.JTextField DeletedReaderID;
     private javax.swing.JMenuItem Home;
     private javax.swing.JPanel HomePanel;
+    private javax.swing.JCheckBox LendBox;
     private javax.swing.JTextField NewBookAuthor;
     private javax.swing.JTextField NewBookID;
     private javax.swing.JTextField NewBookName;
     private javax.swing.JTextField NewBookType;
+    private javax.swing.JTextField NewReaderCNP;
+    private javax.swing.JTextField NewReaderGroup;
+    private javax.swing.JTextField NewReaderID;
+    private javax.swing.JTextField NewReaderName;
     private javax.swing.JMenu Options;
     private javax.swing.JMenu Pages;
-    private javax.swing.JMenuItem Quit;
     private javax.swing.JMenu Reader;
     private javax.swing.JPanel ReaderAddPanel;
     private javax.swing.JTextField ReaderCNP;
+    private javax.swing.JTextField ReaderField;
     private javax.swing.JTextField ReaderGroup;
     private javax.swing.JTextField ReaderID;
     private javax.swing.JTextField ReaderName;
@@ -1334,18 +2456,34 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JMenuItem Refresh;
     private javax.swing.JMenuItem Remove_Book;
     private javax.swing.JMenuItem Remove_Reader;
+    private javax.swing.JCheckBox ReturnBox;
     private java.awt.Button UpdateBook;
+    private java.awt.Button UpdateReader;
     private javax.swing.JMenuItem Update_Book;
     private javax.swing.JMenuItem Update_Reader;
     private javax.swing.JTextField UpdatedBookID;
+    private javax.swing.JTextField UpdatedReaderByCNP;
+    private javax.swing.JTextField UpdatedReaderByID;
     private javax.swing.JMenuItem View;
     private javax.swing.JEditorPane jEditorPane1;
+    private javax.swing.JEditorPane jEditorPane2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextPane jTextPane2;
+    private javax.swing.JTextPane jTextPane3;
+    private javax.swing.JTextPane jTextPane4;
     private java.awt.Label label1;
     private java.awt.Label label10;
     private java.awt.Label label11;
@@ -1356,7 +2494,15 @@ public class HomePage extends javax.swing.JFrame {
     private java.awt.Label label16;
     private java.awt.Label label17;
     private java.awt.Label label18;
+    private java.awt.Label label19;
     private java.awt.Label label2;
+    private java.awt.Label label20;
+    private java.awt.Label label21;
+    private java.awt.Label label22;
+    private java.awt.Label label23;
+    private java.awt.Label label24;
+    private java.awt.Label label25;
+    private java.awt.Label label26;
     private java.awt.Label label3;
     private java.awt.Label label4;
     private java.awt.Label label5;
@@ -1364,5 +2510,7 @@ public class HomePage extends javax.swing.JFrame {
     private java.awt.Label label7;
     private java.awt.Label label8;
     private java.awt.Label label9;
+    private javax.swing.JCheckBox readerCNPCheckBox;
+    private javax.swing.JCheckBox readerIDCheckBox;
     // End of variables declaration//GEN-END:variables
 }
