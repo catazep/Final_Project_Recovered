@@ -991,6 +991,11 @@ public class HomePage extends javax.swing.JFrame {
         Actions.add(jMenuItem1);
 
         jMenuItem2.setText("Search");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         Actions.add(jMenuItem2);
 
         Refresh.setText("Refresh");
@@ -1229,6 +1234,7 @@ public class HomePage extends javax.swing.JFrame {
                             
                          if(NewBookID.getText().equals(""))
                          {
+                            
                             if(!newBookName.equals(""))
                             {
                                 Library.Book.UpdateBookName(Integer.parseInt(updatedBookID), newBookName);
@@ -1245,25 +1251,26 @@ public class HomePage extends javax.swing.JFrame {
                                                 newBookAuthor.equals("")&&newBookType.equals(""))
                             {
                                 JOptionPane.showMessageDialog (null,"   There is nothing to change !", "Warning", JOptionPane.WARNING_MESSAGE);
-                                            
+                                           
                                         //view.jTable1.updateUI();
                             }
                             else
                             {
                                 JOptionPane.showMessageDialog (null,"   Book has been updated !", "", JOptionPane.INFORMATION_MESSAGE);
                                         //view.jTable1.updateUI();
+                                
                             }
                             
                             
                             
                          }
-                         else
+                         else if(!NewBookID.getText().equals(""))
                          {
                                 if(check==false)
                                 {
                                     JOptionPane.showMessageDialog (null,"   Invalid book ID !\n  The book has not been updated !", "Error", JOptionPane.WARNING_MESSAGE);
                                 }
-                                        else if(Integer.parseInt(newBookID)<1)
+                                else if(Integer.parseInt(newBookID)<1)
                                 {
                                     JOptionPane.showMessageDialog (null,"The new book ID must be highere than 0 !\n The book has not been updated !", "Error", JOptionPane.WARNING_MESSAGE);
                                 }
@@ -1271,6 +1278,8 @@ public class HomePage extends javax.swing.JFrame {
                                 else
                                 {
                                     Library.Book book=Library.Book.ExtractBookDatas(Integer.parseInt(newBookID));
+                                    
+                                    
                                     if(book.GetBookID()!=0)
                                     {
                                         JOptionPane.showMessageDialog (null,"The Id is already used !", "Error", JOptionPane.WARNING_MESSAGE);
@@ -1280,22 +1289,22 @@ public class HomePage extends javax.swing.JFrame {
                                         
                                         if(!newBookName.equals(""))
                                         {
-                                        Library.Book.UpdateBookName(Integer.parseInt(updatedBookID), newBookName);
+                                            Library.Book.UpdateBookName(Integer.parseInt(updatedBookID), newBookName);
                                         }
                                         if(!newBookAuthor.equals(""))
                                         {
-                                        Library.Book.UpdateBookAuthor(Integer.parseInt(updatedBookID), newBookAuthor);
+                                            Library.Book.UpdateBookAuthor(Integer.parseInt(updatedBookID), newBookAuthor);
                                         }
                                         if(!newBookType.equals(""))
                                         {
-                                        Library.Book.UpdateBookType(Integer.parseInt(updatedBookID), newBookType);
+                                            Library.Book.UpdateBookType(Integer.parseInt(updatedBookID), newBookType);
                                         }
                                         if(!newBookID.equals(""))
                                         {
-                                        Library.Book.UpdateBookID(Integer.parseInt(updatedBookID), Integer.parseInt(newBookID));
+                                            Library.Book.UpdateBookID(Integer.parseInt(updatedBookID), Integer.parseInt(newBookID));
                                         }
                                         
-                                            JOptionPane.showMessageDialog (null,"   There is nothing to change !", "Warning", JOptionPane.WARNING_MESSAGE);
+                                            JOptionPane.showMessageDialog (null,"   The book has been updated !", "", JOptionPane.INFORMATION_MESSAGE);
                                             
                                         
                                         
@@ -1763,7 +1772,7 @@ public class HomePage extends javax.swing.JFrame {
                     }
                     
                     
-                        JOptionPane.showMessageDialog (null, "The reader has been updated !", "", JOptionPane.INFORMATION_MESSAGE);
+                        //JOptionPane.showMessageDialog (null, "The reader has been updated !", "", JOptionPane.INFORMATION_MESSAGE);
                     
                     
                 }
@@ -2356,6 +2365,16 @@ public class HomePage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ActionActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        search.setVisible(false);
+        search=null;
+        
+        search=new Search();
+        
+        search.setLocation(this.getX()+100, this.getY()+200);
+        search.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
     
     
     
@@ -2404,6 +2423,7 @@ public class HomePage extends javax.swing.JFrame {
     }
     
     public static  View view = new View();
+    private Search search = new Search();
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Action;
